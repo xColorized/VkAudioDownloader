@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Заголовок -->
+        <TextView
+            android:text="VK Audio Downloader"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Кнопка автоматического получения токена -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/autoTokenButton"
+            android:text="Получить токен автоматически"
+            style="@style/Widget.Material3.Button.FilledTonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Поле ввода токена -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Токен VK"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tokenInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Кнопка сохранения токена -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveTokenButton"
+            android:text="Сохранить токен"
+            style="@style/Widget.Material3.Button.FilledButton"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Поле ввода ссылки -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ссылка на аудио VK"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/urlInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Кнопка скачивания -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/downloadButton"
+            android:text="Скачать"
+            style="@style/Widget.Material3.Button.FilledButton"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Прогресс загрузки -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:trackCornerRadius="16dp"
+            app:indicatorColor="@android:color/holo_blue_light"
+            app:trackColor="#333333" />
+
+        <!-- Статус -->
+        <TextView
+            android:id="@+id/statusText"
+            android:text="Ожидание..."
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Кнопка поделиться -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/shareButton"
+            android:text="Поделиться MP3"
+            style="@style/Widget.Material3.Button.FilledTonalButton"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+</ScrollView>
